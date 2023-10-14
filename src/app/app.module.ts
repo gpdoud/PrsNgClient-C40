@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
+import * as ec from './export-component';
+import { MenuComponent } from './misc/menu/menu/menu.component';
+import { MenuitemComponent } from './misc/menu/menuitem/menuitem.component';
 
 const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -13,7 +16,8 @@ const startupServiceFactory = (appinit: AppInitService) => {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ec.HomeComponent,ec.AboutComponent,ec.E404Component,ec.HeaderComponent,ec.FooterComponent, MenuComponent, MenuitemComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule

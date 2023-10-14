@@ -1,0 +1,13 @@
+li {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: silver;
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+a:hover {
+    background-color: black;
+    color: white;
+}
