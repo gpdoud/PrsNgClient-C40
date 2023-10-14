@@ -1,5 +1,12 @@
-<nav>
-    <ul>
-        <app-menuitem [menu]="x" *ngFor="let x of menus" ></app-menuitem>
-    </ul>
-</nav>
+<div class="menu">
+    <div class="left">
+    <nav>
+        <ul>
+            <app-menuitem [menu]="x" *ngFor="let x of menus" ></app-menuitem>
+        </ul>
+    </nav>
+    </div>
+    <div class="right">
+        <span>{{ loggedInUser }}</span>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Menu } from './menu.class';
+import { SystemService } from 'src/app/prs/system/system.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,8 @@ import { Menu } from './menu.class';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+
+  get loggedInUser() { return this.sys.loggedInUser; }
 
   menus: Menu[] = [
     new Menu("PRS", "/home"),
@@ -16,4 +19,8 @@ export class MenuComponent {
     new Menu("Users", "/vend/list"),
     new Menu("Login", "/login")
   ];
+
+  constructor(
+    private sys: SystemService
+  ) {}
 }
