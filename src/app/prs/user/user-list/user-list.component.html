@@ -27,8 +27,8 @@
                 <td>{{ x.username }}</td>
                 <td>{{ x.phone }}</td>
                 <td>{{ x.email }}</td>
-                <td>{{ x.isReviewer }}</td>
-                <td>{{ x.isAdmin }}</td>
+                <td>{{ x.isReviewer | bool}}</td>
+                <td>{{ x.isAdmin | bool}}</td>
                 <td>
                     <a routerLink="/user/det/{{ x.id }}">Det</a>
                     | 

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as ec from './export-component';
 import { UserSearchPipe } from './prs/user/user-search.pipe';
+import { BoolPipe } from './misc/bool/bool.pipe';
 
 
 const startupServiceFactory = (appinit: AppInitService) => {
@@ -19,7 +20,7 @@ const startupServiceFactory = (appinit: AppInitService) => {
     AppComponent,
     ec.HomeComponent,ec.AboutComponent,ec.E404Component,ec.HeaderComponent,ec.FooterComponent, 
     ec.MenuComponent, ec.MenuitemComponent, ec.SortPipe, 
-    ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, UserSearchPipe
+    ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, UserSearchPipe, BoolPipe
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
