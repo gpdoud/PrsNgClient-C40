@@ -6,13 +6,12 @@ import { AppInitService } from 'src/app/app-init.service';
 })
 export class SystemService {
 
-  loggedInUser: any = "GD";
-
+  get config() { return this.init.config; }
+  get baseurl() { return this.config.baseurl; };
+  loggedInUser: any = "Login";
+  
   constructor(
     private init: AppInitService
-  ) { }
+    ) {}
 
-  ngOnInit(): void {
-    console.log("ngOnInit() in SystemService");
-  }
 }

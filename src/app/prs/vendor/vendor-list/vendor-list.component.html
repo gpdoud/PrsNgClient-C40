@@ -1,0 +1,43 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<span> | </span>
+<input [(ngModel)]="searchCriteria" class="search-criteria" placeholder="Search">
+<main>
+    <div>
+        <a routerLink="/vend/add">Create New</a>
+    </div>
+        <table class="table table-sm table-striped">
+            <thead>
+            <tr>
+                <td><button (click)="sortFn('id')" class="btn btn-link sort-column">Id</button></td>
+                <td><button (click)="sortFn('code')" class="btn btn-link sort-column">Code</button></td>
+                <td><button (click)="sortFn('name')" class="btn btn-link sort-column">Nname</button></td>
+                <td><button (click)="sortFn('address')" class="btn btn-link sort-column">Address</button></td>
+                <td><button (click)="sortFn('city')" class="btn btn-link sort-column">City</button></td>
+                <td><button (click)="sortFn('state')" class="btn btn-link sort-column">State</button></td>
+                <td><button (click)="sortFn('zip')" class="btn btn-link sort-column">Zip</button></td>
+                <td><button (click)="sortFn('phone')" class="btn btn-link sort-column">Phone</button></td>
+                <td><button (click)="sortFn('email')" class="btn btn-link sort-column">Email</button></td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of vends | vendorSearch:searchCriteria | sort:sortColumn:sortAsc">
+                <td>{{ x.id }}</td>
+                <td>{{ x.code }}</td>
+                <td>{{ x.name }}</td>
+                <td>{{ x.address }}</td>
+                <td>{{ x.city }}</td>
+                <td>{{ x.state }}</td>
+                <td>{{ x.zip }}</td>
+                <td>{{ x.phone }}</td>
+                <td>{{ x.email }}</td>
+                <td>
+                    <a routerLink="/vend/det/{{ x.id }}">Det</a>
+                    | 
+                    <a routerLink="/vend/chg/{{ x.id }}">Chg</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<app-footer></app-footer>

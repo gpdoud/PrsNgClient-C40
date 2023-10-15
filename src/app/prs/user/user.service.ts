@@ -3,16 +3,17 @@ import { AppInitService } from 'src/app/app-init.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './user.class';
+import { SystemService } from '../system/system.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  url = `http://localhost:5555/api/users`;
+  get url() { return `${this.sys.baseurl}/api/users`; }
 
   constructor(
-    private init: AppInitService,
+    private sys: SystemService,
     private http: HttpClient
   ) { }
 

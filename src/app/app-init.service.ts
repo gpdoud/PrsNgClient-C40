@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppInitService {
 
-  config: any;
+  config: any = null;
 
   constructor(
     private http: HttpClient

@@ -11,3 +11,10 @@ export { UserDetailComponent } from './prs/user/user-detail/user-detail.componen
 export { UserCreateComponent } from './prs/user/user-create/user-create.component';
 export { UserChangeComponent } from './prs/user/user-change/user-change.component';
 export { UserLoginComponent } from './prs/user/user-login/user-login.component';
+export { UserSearchPipe } from './prs/user/user-search.pipe';
+export { BoolPipe } from './misc/bool/bool.pipe';
+export { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.component';
+export { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
+export { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
+export { VendorChangeComponent } from './prs/vendor/vendor-change/vendor-change.component';
+export { VendorSearchPipe } from './prs/vendor/vendor-search.pipe';

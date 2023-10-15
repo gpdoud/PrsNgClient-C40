@@ -7,8 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as ec from './export-component';
-import { UserSearchPipe } from './prs/user/user-search.pipe';
-import { BoolPipe } from './misc/bool/bool.pipe';
+
 
 
 const startupServiceFactory = (appinit: AppInitService) => {
@@ -19,8 +18,10 @@ const startupServiceFactory = (appinit: AppInitService) => {
   declarations: [
     AppComponent,
     ec.HomeComponent,ec.AboutComponent,ec.E404Component,ec.HeaderComponent,ec.FooterComponent, 
-    ec.MenuComponent, ec.MenuitemComponent, ec.SortPipe, 
-    ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, UserSearchPipe, BoolPipe
+    ec.MenuComponent, ec.MenuitemComponent, ec.SortPipe, ec.BoolPipe, 
+    ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, 
+    ec.UserSearchPipe, 
+    ec.VendorListComponent, ec.VendorDetailComponent, ec.VendorCreateComponent, ec.VendorChangeComponent, ec.VendorSearchPipe
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule

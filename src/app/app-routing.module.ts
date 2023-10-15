@@ -11,6 +11,11 @@ const routes: Routes = [
   { path: "user/chg/:id",       component: ec.UserChangeComponent },
   { path: "login",              component: ec.UserLoginComponent },
 
+  { path: "vend/lst",           component: ec.VendorListComponent },
+  { path: "vend/det/:id",       component: ec.VendorDetailComponent },
+  { path: "vend/add",           component: ec.VendorCreateComponent },
+  { path: "vend/chg/:id",       component: ec.VendorChangeComponent },
+
   { path: "home", component: ec.HomeComponent },
   { path: "about", component: ec.AboutComponent },
 

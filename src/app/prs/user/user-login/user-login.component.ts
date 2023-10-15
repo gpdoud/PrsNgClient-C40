@@ -23,9 +23,10 @@ export class UserLoginComponent {
 
   login(): void {
     this.message = ""
+    this.sys.loggedInUser = "Login";
     this.usrsvc.login(this.user.username, this.user.password).subscribe({
       next: (res) => {
-        console.debug(res);
+        console.debug("Login:", res);
         this.sys.loggedInUser = res;
         this.router.navigateByUrl("/user/lst");
       },
