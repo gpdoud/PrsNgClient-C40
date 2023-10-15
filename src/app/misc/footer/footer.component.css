@@ -1,0 +1,8 @@
+div {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    padding-right: 10px;
+    background-color: #dfdfdf;
+}

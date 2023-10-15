@@ -1,9 +1,14 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import * as ec from './export-component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
+
+  { path: "user/lst",           component: ec.UserListComponent },
+  { path: "user/det/:id",       component: ec.UserDetailComponent },
+  { path: "user/add",           component: ec.UserCreateComponent },
+  { path: "user/chg/:id",       component: ec.UserChangeComponent },
 
   { path: "home", component: ec.HomeComponent },
   { path: "about", component: ec.AboutComponent },

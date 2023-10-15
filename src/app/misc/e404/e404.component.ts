@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./e404.component.css']
 })
 export class E404Component {
-
+  pageTitle: string = "E404";
 }

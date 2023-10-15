@@ -1,0 +1,41 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<span> | </span>
+<input [(ngModel)]="searchCriteria" class="search-criteria" placeholder="Search">
+<main>
+    <div>
+        <a routerLink="/user/add">Create New</a>
+    </div>
+    <table class="table table-sm table-striped">
+        <thead>
+            <tr>
+                <td><button (click)="sortFn('id')" class="btn btn-link sort-column">Id</button></td>
+                <td><button (click)="sortFn('lastname')" class="btn btn-link sort-column">Lastname</button></td>
+                <td><button (click)="sortFn('firstname')" class="btn btn-link sort-column">Firstname</button></td>
+                <td><button (click)="sortFn('username')" class="btn btn-link sort-column">Username</button></td>
+                <td><button (click)="sortFn('phone')" class="btn btn-link sort-column">Phone</button></td>
+                <td><button (click)="sortFn('email')" class="btn btn-link sort-column">Email</button></td>
+                <td><button (click)="sortFn('isReviewer')" class="btn btn-link sort-column">Review?</button></td>
+                <td><button (click)="sortFn('isAdmin')" class="btn btn-link sort-column">Admin?</button></td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of users | userSearch:searchCriteria | sort:sortColumn:sortAsc">
+                <td>{{ x.id }}</td>
+                <td>{{ x.lastname }}</td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.username }}</td>
+                <td>{{ x.phone }}</td>
+                <td>{{ x.email }}</td>
+                <td>{{ x.isReviewer }}</td>
+                <td>{{ x.isAdmin }}</td>
+                <td>
+                    <a routerLink="/user/det/{{ x.id }}">Det</a>
+                    | 
+                    <a routerLink="/user/chg/{{ x.id }}">Chg</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<app-footer></app-footer>
