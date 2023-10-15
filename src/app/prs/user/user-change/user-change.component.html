@@ -1,1 +1,49 @@
-<p>user-change works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="user.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Lastname</td>
+                    <td><input [(ngModel)]="user.lastname" name="lastname" ></td>
+                </tr>
+                <tr>
+                    <td>Firstname</td>
+                    <td><input [(ngModel)]="user.firstname" name="firstname" ></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input [(ngModel)]="user.username" name="username" ></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input [(ngModel)]="user.password" type="password" name="password" ></td>
+                </tr>
+                <tr>
+                <td>Phone</td>
+                <td><input [(ngModel)]="user.phone" name="phone" ></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input [(ngModel)]="user.email" name="email" ></td>
+                </tr>
+                <tr>
+                    <td>Reviewer?</td>
+                    <td><input [(ngModel)]="user.isReviewer" type="checkbox" name="reviewer" ></td>
+                </tr>
+                <tr>
+                    <td>Admin?</td>
+                    <td><input [(ngModel)]="user.isAdmin" type="checkbox" name="admin" ></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>
