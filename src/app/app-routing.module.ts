@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: "user/det/:id",       component: ec.UserDetailComponent },
   { path: "user/add",           component: ec.UserCreateComponent },
   { path: "user/chg/:id",       component: ec.UserChangeComponent },
+  { path: "login",              component: ec.UserLoginComponent },
 
   { path: "home", component: ec.HomeComponent },
   { path: "about", component: ec.AboutComponent },

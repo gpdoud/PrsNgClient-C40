@@ -1,1 +1,25 @@
-<p>user-login works!</p>
+<div>
+    <form>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td colspan="2">{{ pageTitle }}</td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input [(ngModel)]="user.username" name="username"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input [(ngModel)]="user.password" type="password" name="password"></td>
+                </tr>
+                <tr></tr>
+                <tr><td colspan="2" class="fw-bold h4 text-danger">{{ message }}</td></tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="login()" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>
