@@ -1,0 +1,44 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="prod.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>PartNbr</td>
+                    <td><input [(ngModel)]="prod.partNbr" name="partnbr" disabled></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="prod.name" name="name" disabled></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input [(ngModel)]="prod.price" type="number" name="price" disabled></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input [(ngModel)]="prod.unit" name="unit" disabled></td>
+                </tr>
+                <tr>
+                    <td>PhotoPath</td>
+                    <td><input [(ngModel)]="prod.photoPath" name="photoPath" disabled></td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td><input [ngModel]="prod.vendor?.name" name="vendor" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="toggle()" class="btn btn-danger">Delete</button>
+            <span *ngIf="showVerifyDelete">
+                | <button (click)="remove()" class="btn btn-danger">Verify Delete</button>
+            </span>
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

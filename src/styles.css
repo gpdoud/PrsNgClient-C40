@@ -2,6 +2,10 @@
 input, select {
     border-radius: 7px;
 }
+select {
+    font-size: 1.3em;
+    width: 187px;
+}
 td {
     margin: 0;
     padding: 0;

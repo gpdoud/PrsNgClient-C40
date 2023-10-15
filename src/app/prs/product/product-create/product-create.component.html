@@ -1,0 +1,45 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="prod.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>PartNbr</td>
+                    <td><input [(ngModel)]="prod.partNbr" name="partnbr" ></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="prod.name" name="name" ></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input [(ngModel)]="prod.price" name="price" ></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input [(ngModel)]="prod.unit" name="unit" ></td>
+                </tr>
+                <tr>
+                    <td>PhotoPath</td>
+                    <td><input [(ngModel)]="prod.photoPath" name="photopath" ></td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td>
+                        <select [(ngModel)]="prod.vendorId" name="vends">
+                            <option *ngFor="let x of vends" value="{{ x.id }}">{{ x.name }}</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

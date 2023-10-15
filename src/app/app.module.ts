@@ -10,6 +10,7 @@ import * as ec from './export-component';
 
 
 
+
 const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
@@ -21,7 +22,8 @@ const startupServiceFactory = (appinit: AppInitService) => {
     ec.MenuComponent, ec.MenuitemComponent, ec.SortPipe, ec.BoolPipe, 
     ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, 
     ec.UserSearchPipe, 
-    ec.VendorListComponent, ec.VendorDetailComponent, ec.VendorCreateComponent, ec.VendorChangeComponent, ec.VendorSearchPipe
+    ec.VendorListComponent, ec.VendorDetailComponent, ec.VendorCreateComponent, ec.VendorChangeComponent, ec.VendorSearchPipe, 
+    ec.ProductSearchPipe, ec.ProductListComponent, ec.ProductDetailComponent, ec.ProductCreateComponent, ec.ProductChangeComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule

@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SystemService } from '../../system/system.service';
-import { Vendor } from '../vendor.class';
-import { VendorService } from '../vendor.service';
+import { Product } from '../product.class';
+import { ProductService } from '../product.service';
+import { VendorService } from '../../vendor/vendor.service';
+import { Vendor } from '../../vendor/vendor.class';
 
 @Component({
-  selector: 'app-vendor-detail',
-  templateUrl: './vendor-detail.component.html',
-  styleUrls: ['./vendor-detail.component.css']
+  selector: 'app-product-detail',
+  templateUrl: './product-detail.component.html',
+  styleUrls: ['./product-detail.component.css']
 })
-export class VendorDetailComponent {
+export class ProductDetailComponent {
 
-  pageTitle = "Vendor Detail";
-  vend: Vendor = new Vendor();
+  pageTitle = "Product Detail";
+  prod: Product = new Product();
   
   constructor(
     private sys: SystemService,
-    private vndsvc: VendorService,
+    private prdsvc: ProductService,
     private route: ActivatedRoute,
     private router: Router
   ){}
@@ -27,10 +29,10 @@ export class VendorDetailComponent {
   }
 
   remove(): void {
-    this.vndsvc.remove(this.vend.id).subscribe({
+    this.prdsvc.remove(this.prod.id).subscribe({
       next: (res) => {
         console.debug("Deleted...");
-        this.router.navigateByUrl("/vend/lst");
+        this.router.navigateByUrl("/prod/lst");
       },
       error: (err) => console.debug(err)
     });
@@ -38,10 +40,10 @@ export class VendorDetailComponent {
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
-    this.vndsvc.get(id).subscribe({
+    this.prdsvc.get(id).subscribe({
       next: (res) => {
-        console.debug("Vendor:", res);
-        this.vend = res;
+        console.debug("Product:", res);
+        this.prod = res;
       },
       error: (err) => console.debug(err)
     });

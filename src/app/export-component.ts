@@ -18,3 +18,8 @@ export { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.
 export { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
 export { VendorChangeComponent } from './prs/vendor/vendor-change/vendor-change.component';
 export { VendorSearchPipe } from './prs/vendor/vendor-search.pipe';
+export { ProductSearchPipe } from './prs/product/product-search.pipe';
+export { ProductListComponent } from './prs/product/product-list/product-list.component';
+export { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
+export { ProductCreateComponent } from './prs/product/product-create/product-create.component';
+export { ProductChangeComponent } from './prs/product/product-change/product-change.component';
