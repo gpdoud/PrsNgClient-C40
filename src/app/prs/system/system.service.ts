@@ -8,7 +8,7 @@ import { AppInitService } from 'src/app/app-init.service';
 export class SystemService {
 
   get config() { return this.init.config; }
-  get baseurl() { return this.config.baseurl; };
+  //get baseurl() { return this.config.baseurl; };
   loggedInUser: any = null;
   
   constructor(

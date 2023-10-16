@@ -10,6 +10,7 @@ import * as ec from './export-component';
 
 
 const startupServiceFactory = (appinit: AppInitService) => {
+  console.debug("startupServiceFactory()");
   return () => appinit.getSettings();
 }
  

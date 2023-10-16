@@ -13,8 +13,10 @@ export class AppInitService {
   ) { }
 
   getSettings(): void {
+    console.debug("Reading config.json");
     this.http.get("./assets/config.json").subscribe(
       (cfg) => {
+        console.debug("Returned config.json");
         this.config = cfg;
         console.debug("assets/config.json", this.config);
       }

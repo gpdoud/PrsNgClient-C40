@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import * as ec from './export-component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "", redirectTo: "/login", pathMatch: "full" },
 
   { path: "prod/lst",           component: ec.ProductListComponent },
   { path: "prod/det/:id",       component: ec.ProductDetailComponent },

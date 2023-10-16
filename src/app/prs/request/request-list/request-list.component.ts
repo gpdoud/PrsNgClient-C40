@@ -30,6 +30,7 @@ export class RequestListComponent {
   ) {}
 
   ngOnInit(): void {
+    this.sys.chkLogin(); 
     this.reqsvc.list().subscribe({
       next: (res) => {
         console.debug("Requests:", res);
