@@ -25,15 +25,15 @@
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td><input [ngModel]="req.status" name="status" ></td>
+                    <td><input [ngModel]="req.status" name="status"  disabled></td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td><input [ngModel]="req.total | currency" name="total" ></td>
+                    <td><input [ngModel]="req.total | currency" name="total"  disabled></td>
                 </tr>
                 <tr>
                     <td>User</td>
-                    <td><input [ngModel]="user.username" name="user" ></td>
+                    <td><input [ngModel]="user.username" name="user" disabled></td>
                 </tr>
             </tbody>
         </table>
