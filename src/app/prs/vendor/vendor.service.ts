@@ -9,7 +9,7 @@ import { Vendor } from './vendor.class';
 })
 export class VendorService {
   
-  get url() { return `${this.sys.baseurl}/api/vendors`; }
+  get url() { return `${this.sys.config.baseurl}/api/vendors`; }
 
   constructor(
     private sys: SystemService,

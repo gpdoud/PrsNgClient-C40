@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { SystemService } from '../../system/system.service';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-request-create',
@@ -13,6 +14,7 @@ export class RequestCreateComponent {
 
   pageTitle = "Request Create";
   req: Request = new Request();
+  user: User = new User();
   
   constructor(
     private sys: SystemService,
@@ -21,6 +23,7 @@ export class RequestCreateComponent {
   ) {}
 
   save(): void {
+    console.debug("B4:", this.req)
     this.reqsvc.create(this.req).subscribe({
       next: (res) => {
         console.debug("Created...");
@@ -31,5 +34,11 @@ export class RequestCreateComponent {
   }
 
   ngOnInit(): void {
+    console.warn("chkLogin()");
+    this.sys.chkLogin();
+    if(this.sys.loggedInUser !== null) {
+      this.req.userId = this.sys.loggedInUser.id;
+      this.user = this.sys.loggedInUser;
+    }
   }
 }

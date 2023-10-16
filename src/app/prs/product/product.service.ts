@@ -9,7 +9,7 @@ import { Product } from './product.class';
 })
 export class ProductService {
 
-  get url() { return `${this.sys.baseurl}/api/products`; }
+  get url() { return `${this.sys.config.baseurl}/api/products`; }
 
   constructor(
     private sys: SystemService,

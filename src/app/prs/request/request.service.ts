@@ -9,7 +9,7 @@ import { Request } from './request.class';
 })
 export class RequestService {
 
-  get url() { return `${this.sys.baseurl}/api/requests`; }
+  get url() { return `${this.sys.config.baseurl}/api/requests`; }
 
   constructor(
     private sys: SystemService,

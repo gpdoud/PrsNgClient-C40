@@ -10,7 +10,7 @@ import { SystemService } from '../system/system.service';
 })
 export class UserService {
 
-  get url() { return `${this.sys.baseurl}/api/users`; }
+  get url() { return `${this.sys.config.baseurl}/api/users`; }
 
   constructor(
     private sys: SystemService,

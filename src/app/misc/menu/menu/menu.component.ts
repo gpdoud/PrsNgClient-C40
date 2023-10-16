@@ -9,7 +9,10 @@ import { SystemService } from 'src/app/prs/system/system.service';
 })
 export class MenuComponent {
 
-  get loggedInUser() { return this.sys.loggedInUser.username; }
+  get loggedInUser() { 
+    return this.sys.loggedInUser === null 
+                      ? "Login" 
+                      : this.sys.loggedInUser.username; }
 
   menus: Menu[] = [
     new Menu("PRS", "/home"),

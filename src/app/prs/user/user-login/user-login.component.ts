@@ -23,12 +23,11 @@ export class UserLoginComponent {
 
   login(): void {
     this.message = ""
-    this.sys.loggedInUser = "Login";
     this.usrsvc.login(this.user.username, this.user.password).subscribe({
       next: (res) => {
         console.debug("Login:", res);
         this.sys.loggedInUser = res;
-        this.router.navigateByUrl("/user/lst");
+        this.router.navigateByUrl("/req/lst");
       },
       error: (err) => {
         if(err.status === 404) {
@@ -41,6 +40,6 @@ export class UserLoginComponent {
   }
 
   ngOnInit(): void {
-
+    this.sys.loggedInUser = null;
   }
 }
