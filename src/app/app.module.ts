@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as ec from './export-component';
 
+
 const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
@@ -22,7 +23,8 @@ const startupServiceFactory = (appinit: AppInitService) => {
     ec.VendorListComponent, ec.VendorDetailComponent, ec.VendorCreateComponent, ec.VendorChangeComponent, ec.VendorSearchPipe, 
     ec.ProductSearchPipe, ec.ProductListComponent, ec.ProductDetailComponent, ec.ProductCreateComponent, ec.ProductChangeComponent, 
     ec.RequestSearchPipe, ec.RequestListComponent, ec.RequestDetailComponent, ec.RequestCreateComponent, ec.RequestChangeComponent, 
-    ec.RequestLinesComponent, ec.RequestReviewComponent, ec.RequestReviewItemComponent
+    ec.RequestLinesComponent, ec.RequestReviewComponent, ec.RequestReviewItemComponent, 
+    ec.RequestlineCreateComponent, ec.RequestlineChangeComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule

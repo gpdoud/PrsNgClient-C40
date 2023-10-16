@@ -4,6 +4,7 @@ import { SystemService } from '../../system/system.service';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
 import { Requestline } from '../../requestline/requestline.class';
+import { RequestlineService } from '../../requestline/requestline.service';
 
 @Component({
   selector: 'app-request-lines',
@@ -18,6 +19,7 @@ export class RequestLinesComponent {
   constructor(
     private sys: SystemService,
     private reqsvc: RequestService,
+    private reqlsvc: RequestlineService,
     private route: ActivatedRoute,
     private router: Router
   ){}
@@ -36,12 +38,23 @@ export class RequestLinesComponent {
     this.showVerifyDelete  = !this.showVerifyDelete;
   }
 
-  change(id: number): void {
+  saveReqId: number = 0;
 
+  change(id: number): void {
+    this.router.navigateByUrl(`/reql/chg/${id}`)
   }
-  remove(reql: Requestline): void {
+  remove(id: number): void {
+    this.saveReqId = id;
+    this.showVerifyDelete = !this.showVerifyDelete;
   }
-  verifyRemove(reql: Requestline): void {
+  verifyRemove(id: number): void {
+    this.reqlsvc.remove(id).subscribe({
+      next: (res) => {
+        console.debug("Removed...");
+        this.refresh();
+      },
+      error: (err) => console.debug(err)      
+    });
   }
 
   refresh(): void {

@@ -18,6 +18,9 @@ const routes: Routes = [
   { path: "req/rev",            component: ec.RequestReviewComponent },
   { path: "req/rev/itm/:id",    component: ec.RequestReviewItemComponent },
 
+  { path: "reql/add/:rid",      component: ec.RequestlineCreateComponent },
+  { path: "reql/chg/:id",       component: ec.RequestlineChangeComponent },
+
   { path: "user/lst",           component: ec.UserListComponent },
   { path: "user/det/:id",       component: ec.UserDetailComponent },
   { path: "user/add",           component: ec.UserCreateComponent },

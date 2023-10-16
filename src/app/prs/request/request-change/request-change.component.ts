@@ -40,4 +40,6 @@ export class RequestChangeComponent {
       },
       error: (err) => console.error(err)
     });
-  }}
+  }
+
+}

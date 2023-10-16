@@ -1,0 +1,29 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="reql.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td><input [(ngModel)]="reql.quantity" type="number" name="quantity" ></td>
+                </tr>
+                <tr>
+                    <td>Product</td>
+                    <td>
+                        <select [(ngModel)]="reql.productId" name="justification" >
+                            <option *ngFor="let x of prods" value="{{ x.id }}">{{ x.name }}</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

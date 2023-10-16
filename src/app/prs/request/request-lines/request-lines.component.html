@@ -26,7 +26,7 @@
             </tr>
         </tbody>
     </table>
-    <a routerLink="/reql/add/(req.id)" class="btn btn-link sort-column">Add</a>
+    <a routerLink="/reql/add/{{ req.id }}" class="btn btn-link sort-column">Add</a>
     <table class="table table-sm table-striped">
         <thead>
             <tr>
@@ -40,16 +40,17 @@
         </thead>
         <tbody>
             <tr *ngFor="let x of req.requestlines">
+                <td>{{ x.id }}</td>
                 <td>{{ x.product!.name }}</td>
                 <td>{{ x.quantity }}</td>
                 <td>{{ x.product!.price | currency }}</td>
-                <td>{{ x.product!.price * x.quantity| currency }}</td>
-                <td>
-                    <button (click)="change(x.id)" class="btn btn-link btn-primary sort-column">Chg</button>
-                    <button (click)="remove(x)" class="btn btn-link btn-danger sort-column">Rem</button>
+                <td>{{ x.product!.price * x.quantity | currency }}</td>
+                <td class="action">
+                    <button (click)="change(x.id)" class="btn btn-link text-primary sort-column">Chg</button> |
+                    <button (click)="remove(x.id)" class="btn btn-link text-danger sort-column">Rem</button>
                     <span *ngIf="showVerifyDelete">
                         |
-                        <button (click)="verifyRemove(x)" class="btn btn-link btn-danger sort-column">Rem</button>                        
+                        <button (click)="verifyRemove(x.id)" class="btn btn-link text-danger sort-column">Verify</button>                        
                     </span>
                 </td>
             </tr>

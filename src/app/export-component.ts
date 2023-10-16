@@ -31,3 +31,5 @@ export { RequestChangeComponent } from './prs/request/request-change/request-cha
 export { RequestLinesComponent } from './prs/request/request-lines/request-lines.component';
 export { RequestReviewComponent } from './prs/request/request-review/request-review.component';
 export { RequestReviewItemComponent } from './prs/request/request-review-item/request-review-item.component';
+export { RequestlineCreateComponent } from './prs/requestline/requestline-create/requestline-create.component';
+export { RequestlineChangeComponent } from './prs/requestline/requestline-change/requestline-change.component';
