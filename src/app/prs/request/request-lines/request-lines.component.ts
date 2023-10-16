@@ -58,7 +58,7 @@ export class RequestLinesComponent {
   }
 
   refresh(): void {
-    //this.sys.chkLogin();
+    this.sys.chkLogin();
     let id = +this.route.snapshot.params["id"];
     this.reqsvc.get(id).subscribe({
       next: (res) => {

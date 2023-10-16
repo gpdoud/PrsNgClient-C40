@@ -32,6 +32,7 @@ export class UserChangeComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     let id = this.route.snapshot.params["id"];
     this.usrsvc.get(id).subscribe({
       next: (res) => {

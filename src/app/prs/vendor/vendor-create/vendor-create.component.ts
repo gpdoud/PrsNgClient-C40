@@ -31,6 +31,7 @@ export class VendorCreateComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
 
   }
 

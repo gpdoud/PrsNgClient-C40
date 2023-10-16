@@ -37,6 +37,7 @@ export class VendorDetailComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     let id = +this.route.snapshot.params["id"];
     this.vndsvc.get(id).subscribe({
       next: (res) => {

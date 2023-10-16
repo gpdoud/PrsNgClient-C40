@@ -53,6 +53,7 @@ export class RequestReviewItemComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     this.refresh();
   }
 }

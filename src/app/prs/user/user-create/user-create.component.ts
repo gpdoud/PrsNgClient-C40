@@ -32,6 +32,7 @@ export class UserCreateComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
 
   }
 }

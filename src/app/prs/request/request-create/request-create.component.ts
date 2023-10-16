@@ -34,7 +34,6 @@ export class RequestCreateComponent {
   }
 
   ngOnInit(): void {
-    console.warn("chkLogin()");
     this.sys.chkLogin();
     if(this.sys.loggedInUser !== null) {
       this.req.userId = this.sys.loggedInUser.id;

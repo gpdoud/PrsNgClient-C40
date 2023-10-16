@@ -27,6 +27,7 @@ export class RequestDetailComponent {
   }
 
   remove(): void {
+    this.sys.chkLogin()
     this.reqsvc.remove(this.req.id).subscribe({
       next: (res) => {
         console.debug("Deleted...");

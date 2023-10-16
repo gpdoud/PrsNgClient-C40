@@ -39,6 +39,7 @@ export class ProductDetailComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     let id = +this.route.snapshot.params["id"];
     this.prdsvc.get(id).subscribe({
       next: (res) => {

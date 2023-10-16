@@ -31,6 +31,7 @@ export class ProductListComponent {
   ) {}
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     this.prdsvc.list().subscribe({
       next: (res) => {
         console.debug("Products:", res);

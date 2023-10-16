@@ -30,6 +30,7 @@ export class UserListComponent {
   ) {}
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     this.usrsvc.list().subscribe({
       next: (res) => {
         console.debug("Users:", res);

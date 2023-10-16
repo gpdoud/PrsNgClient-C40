@@ -32,6 +32,7 @@ export class RequestChangeComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     let id = this.route.snapshot.params["id"];
     this.reqsvc.get(id).subscribe({
       next: (res) => {

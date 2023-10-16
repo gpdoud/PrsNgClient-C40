@@ -36,6 +36,7 @@ export class ProductChangeComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin()
     this.vndsvc.list().subscribe({
       next: (res) => {
         console.debug("Vendors:", res);
