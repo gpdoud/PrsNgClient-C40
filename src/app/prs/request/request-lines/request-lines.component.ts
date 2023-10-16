@@ -22,6 +22,15 @@ export class RequestLinesComponent {
     private router: Router
   ){}
 
+  review(): void {
+    this.reqsvc.review(this.req).subscribe({
+      next: (res) => {
+        console.debug("Reviewed...");
+        this.refresh();
+      }
+    });
+  }
+
   showVerifyDelete: boolean = false;
   toggle(): void {
     this.showVerifyDelete  = !this.showVerifyDelete;
@@ -35,7 +44,7 @@ export class RequestLinesComponent {
   verifyRemove(reql: Requestline): void {
   }
 
-  ngOnInit(): void {
+  refresh(): void {
     //this.sys.chkLogin();
     let id = +this.route.snapshot.params["id"];
     this.reqsvc.get(id).subscribe({
@@ -45,6 +54,10 @@ export class RequestLinesComponent {
       },
       error: (err) => console.debug(err)
     });
+  }
+
+  ngOnInit(): void {
+    this.refresh();
   }
 
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "req/chg/:id",        component: ec.RequestChangeComponent },
   { path: "req/lns/:id",        component: ec.RequestLinesComponent },
   { path: "req/rev",            component: ec.RequestReviewComponent },
-  { path: "req/rev/itm/:uid",   component: ec.RequestReviewItemComponent },
+  { path: "req/rev/itm/:id",    component: ec.RequestReviewItemComponent },
 
   { path: "user/lst",           component: ec.UserListComponent },
   { path: "user/det/:id",       component: ec.UserDetailComponent },

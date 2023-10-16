@@ -1,1 +1,50 @@
-<p>request-review-item works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+        <table class="table table-sm table-striped">
+            <thead>
+            <tr>
+                <td><button class="btn btn-link sort-column">Id</button></td>
+                <td><button class="btn btn-link sort-column">Description</button></td>
+                <td><button class="btn btn-link sort-column">RejectionReason</button></td>
+                <td><button class="btn btn-link sort-column">Status</button></td>
+                <td><button class="btn btn-link sort-column">Total</button></td>
+                <td>User</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ req.id }}</td>
+                <td>{{ req.description }}</td>
+                <td class="text-danger fw-bold">{{ req.rejectionReason }}</td>
+                <td>{{ req.status }}</td>
+                <td>{{ req.total | currency }}</td>
+                <td>{{ req.user?.username }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of req.requestlines">
+                <td>{{ x.product!.name }}</td>
+                <td>{{ x.quantity }}</td>
+                <td>{{ x.product!.price | currency }}</td>
+                <td>{{ x.product!.price * x.quantity| currency }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button (click)="approve()" class="btn btn-success btn-sm">Approve</button> |
+        <input [(ngModel)]="req.rejectionReason" class="reason" placeholder="Rejection reason (required to reject)"> |
+        <button (click)="reject()" class="btn btn-danger btn-sm">Reject</button>
+    </div>
+</main>
+<app-footer></app-footer>

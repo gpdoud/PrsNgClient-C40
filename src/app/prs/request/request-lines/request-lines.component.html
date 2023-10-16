@@ -21,7 +21,7 @@
                 <td>{{ req.total | currency }}</td>
                 <td>{{ req.user?.username }}</td>
                 <td>
-                    <a routerLink="/req/rev" class="btn btn-link sort-column">Review</a>
+                    <button (click)="review()" class="btn btn-link sort-column">Review</button>
                 </td>
             </tr>
         </tbody>
