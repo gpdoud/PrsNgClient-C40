@@ -45,4 +45,5 @@ export class RequestDetailComponent {
       },
       error: (err) => console.debug(err)
     });
-  }}
+  }
+}

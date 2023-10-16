@@ -11,7 +11,7 @@ import * as ec from './export-component';
 const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
-
+  
 @NgModule({
   declarations: [
     AppComponent, ec.HeaderComponent, ec.FooterComponent,

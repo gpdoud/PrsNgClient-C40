@@ -10,7 +10,7 @@
             <tr>
                 <td><button (click)="sortFn('id')" class="btn btn-link sort-column">Id</button></td>
                 <td><button (click)="sortFn('description')" class="btn btn-link sort-column">Description</button></td>
-                <td><button (click)="sortFn('justifiction')" class="btn btn-link sort-column">Justification</button></td>
+                <td><button (click)="sortFn('justification')" class="btn btn-link sort-column">Justification</button></td>
                 <td><button (click)="sortFn('status')" class="btn btn-link sort-column">Status</button></td>
                 <td><button (click)="sortFn('total')" class="btn btn-link sort-column">Total</button></td>
                 <td>User</td>
@@ -29,6 +29,8 @@
                     <a routerLink="/req/det/{{ x.id }}">Det</a>
                     | 
                     <a routerLink="/req/chg/{{ x.id }}">Chg</a>
+                    | 
+                    <a routerLink="/req/lns/{{ x.id }}">Lns</a>
                 </td>
             </tr>
         </tbody>

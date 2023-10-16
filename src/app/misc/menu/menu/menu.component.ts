@@ -17,6 +17,7 @@ export class MenuComponent {
   menus: Menu[] = [
     new Menu("PRS", "/home"),
     new Menu("Requests", "/req/lst"),
+    new Menu("Reviews", "/req/rev"),
     new Menu("Products", "/prod/lst"),
     new Menu("Vendors", "/vend/lst"),
     new Menu("Users", "/user/lst"),
