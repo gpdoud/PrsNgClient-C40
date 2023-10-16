@@ -23,3 +23,11 @@ export { ProductListComponent } from './prs/product/product-list/product-list.co
 export { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
 export { ProductCreateComponent } from './prs/product/product-create/product-create.component';
 export { ProductChangeComponent } from './prs/product/product-change/product-change.component';
+export { RequestSearchPipe } from './prs/request/request-search.pipe';
+export { RequestListComponent } from './prs/request/request-list/request-list.component';
+export { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
+export { RequestCreateComponent } from './prs/request/request-create/request-create.component';
+export { RequestChangeComponent } from './prs/request/request-change/request-change.component';
+export { RequestLinesComponent } from './prs/request/request-lines/request-lines.component';
+export { RequestReviewComponent } from './prs/request/request-review/request-review.component';
+export { RequestReviewItemComponent } from './prs/request/request-review-item/request-review-item.component';

@@ -1,0 +1,48 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+<main>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="req.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input [(ngModel)]="req.description" name="description" disabled></td>
+                </tr>
+                <tr>
+                    <td>Justification</td>
+                    <td><input [(ngModel)]="req.justification" name="justification" disabled></td>
+                </tr>
+                <tr *ngIf="req.rejectionReason">
+                    <td>RejectionReason</td>
+                    <td><input [(ngModel)]="req.rejectionReason" name="rejectionreason" disabled></td>
+                </tr>
+                <tr>
+                    <td>DeliveryMode</td>
+                    <td><input [(ngModel)]="req.deliveryMode" name="deliveryMode" disabled></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input [ngModel]="req.status" name="status" disabled></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input [ngModel]="req.total | currency" name="total" disabled></td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td><input [ngModel]="req.user?.username" name="user" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="toggle()" class="btn btn-danger">Delete</button>
+            <span *ngIf="showVerifyDelete">
+                | <button (click)="remove()" class="btn btn-danger">Verify Delete</button>
+            </span>
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

@@ -10,6 +10,14 @@ const routes: Routes = [
   { path: "prod/add",           component: ec.ProductCreateComponent },
   { path: "prod/chg/:id",       component: ec.ProductChangeComponent },
 
+  { path: "req/lst",            component: ec.RequestListComponent },
+  { path: "req/det/:id",        component: ec.RequestDetailComponent },
+  { path: "req/add",            component: ec.RequestCreateComponent },
+  { path: "req/chg/:id",        component: ec.RequestChangeComponent },
+  { path: "req/lns/:id",        component: ec.RequestLinesComponent },
+  { path: "req/rev/:uid",       component: ec.RequestReviewComponent },
+  { path: "req/rev/itm/:uid",   component: ec.RequestReviewItemComponent },
+
   { path: "user/lst",           component: ec.UserListComponent },
   { path: "user/det/:id",       component: ec.UserDetailComponent },
   { path: "user/add",           component: ec.UserCreateComponent },

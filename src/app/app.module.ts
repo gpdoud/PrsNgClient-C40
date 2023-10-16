@@ -8,22 +8,21 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as ec from './export-component';
 
-
-
-
 const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, ec.HeaderComponent, ec.FooterComponent,
     ec.HomeComponent,ec.AboutComponent,ec.E404Component,ec.HeaderComponent,ec.FooterComponent, 
     ec.MenuComponent, ec.MenuitemComponent, ec.SortPipe, ec.BoolPipe, 
     ec.UserListComponent, ec.UserDetailComponent, ec.UserCreateComponent, ec.UserChangeComponent, ec.UserLoginComponent, 
     ec.UserSearchPipe, 
     ec.VendorListComponent, ec.VendorDetailComponent, ec.VendorCreateComponent, ec.VendorChangeComponent, ec.VendorSearchPipe, 
-    ec.ProductSearchPipe, ec.ProductListComponent, ec.ProductDetailComponent, ec.ProductCreateComponent, ec.ProductChangeComponent
+    ec.ProductSearchPipe, ec.ProductListComponent, ec.ProductDetailComponent, ec.ProductCreateComponent, ec.ProductChangeComponent, 
+    ec.RequestSearchPipe, ec.RequestListComponent, ec.RequestDetailComponent, ec.RequestCreateComponent, ec.RequestChangeComponent, 
+    ec.RequestLinesComponent, ec.RequestReviewComponent, ec.RequestReviewItemComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
