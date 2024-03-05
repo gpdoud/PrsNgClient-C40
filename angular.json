@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PrsNgClient-C40:build:production"
+              "buildTarget": "PrsNgClient-C40:build:production"
             },
             "development": {
-              "browserTarget": "PrsNgClient-C40:build:development"
+              "buildTarget": "PrsNgClient-C40:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,7 +97,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PrsNgClient-C40:build"
+            "buildTarget": "PrsNgClient-C40:build"
           }
         },
         "test": {
